@@ -1,8 +1,9 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-  state = { term: "Hello" };
+  state = { term: "" };
 
+  //pakai arrow function buat define 'this' setState
   onFormSubmit = (event) => {
     event.preventDefault();
 
@@ -19,7 +20,7 @@ class SearchBar extends React.Component {
               type="text"
               value={this.state.term}
               onChange={(e) =>
-                this.setState({ term: e.target.value.toUpperCase() })
+                this.setState({ term: e.target.value })
               }
             />
           </div>
